@@ -1,0 +1,12 @@
+邮箱地址：Email?Address
+链接：Link
+点击：Click
+是：true
+否：false
+姓名：name
+年龄：Age
+性别：Sex
+数字：num / number
+符号：sign
+消息：message
+价格：price

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button>点名啦</button>
+    <script>
+    var n=["王大爷","张大爷","马大爷","李大爷","田大爷","刘大爷","气儿","王中王","廖里奥","峰里奥"];//创建一个装有名字的数组并命名为n
+    var btn=document.querySelector("button");                                                   //获取元素“button”并取名为btn
+    var h1=document.querySelector("h1")                                                         //获取元素“h1”并取名为“h1”
+    btn.addEventListener("click",function(){                                                    //创建点击事件点击btn后执行
+        var p=Math.floor(Math.random()*n.length);                                               //随机一个小于数组n的长度的数
+        h1.innerHTML=n[p];                                                                      //输出n[小于数组n的长度的随机数]并覆盖h1的内容
+    });
+    </script>
+</body>
+</html>

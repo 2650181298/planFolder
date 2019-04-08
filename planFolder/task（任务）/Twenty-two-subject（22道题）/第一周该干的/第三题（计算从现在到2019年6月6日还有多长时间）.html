@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+    setInterval(function(){                                             //每隔一秒重复执行
+        var h1=document.querySelector("h1");                            //获取元素并取名为h1
+        var da=new Date("2019-6-6 0:0:0");                              //设定被比较的时间为2019年6月6日
+        var da1=da.getTime();                                           //将被比较的时间换算成毫秒s'c
+        var xianda=new Date();
+        var xianda1=xianda.getTime();
+        num=da1-xianda1;
+        var tian=num/1000/60/60/24;
+        var si=num/1000/60/60%24;
+        var fen=num/1000/60%60;
+        var miao=num/1000%60;
+        h1.innerHTML=Math.floor(tian)+"天"+Math.floor(si)+"时"+Math.floor(fen)+"分"+Math.floor(miao)+"秒"
+    },1000);
+    </script>
+</body>
+</html>
