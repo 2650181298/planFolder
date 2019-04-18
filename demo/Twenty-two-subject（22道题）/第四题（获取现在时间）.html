@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{date}}
+    </div>
+    <script src="vue/vue.js"></script>
+    <script>
+    
+        new Vue({
+              el:'#app',
+              data:{
+                  date: Date()
+              },
+              mounted () {
+                  var a = this; //声明一个变量指向vue实例this,保证作用域一致(现在a就是this代码)
+                  this.b = setInterval(() => {a.date = Date();}, 1000);//将现在时间赋值到date里并每秒输出
+              },
+        })
+    </script>
+</body>
+</html>

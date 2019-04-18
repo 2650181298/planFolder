@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var n=[5,10,6,11,18,22,11,31,6,52,19];  //要判断的数组
+    var s={};                               //新建一个空对象s
+    var n2=[];                              //新建一个空数组n2
+    for(var i=0;i<n.length;i++){            //循环语句
+        if(!s[n[i]]){                       //判断对象s中是否包含数组n中的值
+            s[n[i]]="这个是没重复的值";       //如果不包含n中的值那么在对象中新建一个这个值
+            n2.push(n[i]);                  //将n的值添加到数组n2中
+        }
+    }
+    console.log(n2);                        //输出n2
+    
+    
+    
+    
+    </script>
+</body>
+</html>

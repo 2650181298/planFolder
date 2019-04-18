@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+    var h1=document.querySelector("h1");
+    setInterval(function(){
+        var a=new Date();           //获取当前时间并赋值给a
+        h1.innerHTML=a;             //将当前时间覆盖到h1中
+    },1000)
+    </script>
+</body>
+</html>

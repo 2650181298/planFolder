@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="di">
+        <h1>{{Roll}}</h1>
+        <button @click="go">点名</button>
+        <button @click="over">结束</button>
+    </div>
+    <script src="vue/vue.js"></script>
+    <script>
+    new Vue({
+        el:"#di",
+        data:{
+            Roll:"",
+            is:null,
+        },
+        methods:{
+            go(){
+                var a=["李大爷","张大爷","王忠王","气儿","马生禽","范仲淹","李太白","艾欧尼亚"];
+                // if(this.is!=null){
+                //     return;
+                // };
+                clearInterval(this.is)
+                this.is=setInterval(() => {
+                    var n = Math.floor(Math.random()*a.length);
+                    this.Roll = a[n];
+
+                },50)
+                
+                
+            },
+            
+            over(){
+                    clearInterval(this.is);
+                    this.is=null;
+            }
+
+        }
+    })
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="di">
+        <h1>{{time}}</h1>
+    </div>
+    <script src="vue/vue.js"></script>
+    <script>
+    new Vue({
+        el:"#di",
+        data:{
+            time:""
+            },
+        mounted(){
+            setInterval(() => {
+            var a=this;
+            var nao=new Date();
+            var nao1=nao.getTime();
+            var d=new Date("2019-6-6 0:0:0");
+            var d1=d.getTime();
+            var xianz=d1-nao1;
+            var tian=Math.floor(xianz/1000/60/60/24);
+            var si=Math.floor(xianz/1000/60/60%24);
+            var fen=Math.floor(xianz/1000/60%60);
+            var miao=Math.floor(xianz/1000%60);
+            var haomiao=Math.floor(xianz%1000);
+            var xianzai=tian+"天"+si+"时"+fen+"分"+miao+"秒"+haomiao+"毫秒";
+                a.time=xianzai;
+            }, 1)
+        }
+    })
+    
+    
+    </script>
+</body>
+</html>

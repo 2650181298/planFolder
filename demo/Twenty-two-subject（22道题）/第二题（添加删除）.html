@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="di">
+        <input type="text" v-model="inp">
+        <button v-on:click="but">添加</button>
+        <ul>
+            <li v-for="(l,n) in li1">{{l}} <span v-on:click="sp(n)">删除</span></li>
+        </ul>
+    </div>
+    <script src="vue/vue.js"></script>
+    <script>
+    new Vue({
+        el:"#di",
+
+        data:{
+            li1:["香蕉","苹果","鸭梨"],
+        },
+
+        methods:{
+            sp:function(n){
+                this.li1.splice(n,1);
+            },
+            but:function(){
+                this.li1.push(this.inp);
+            }
+        }
+    })
+    </script>
+    
+</body>
+</html>

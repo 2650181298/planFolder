@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="di">
+        <button v-on:click="but1">-</button>
+        <span>{{nu}}</span>
+        <button v-on:click="but2">+</button>
+    </div>
+    <script src="vue/vue.js"></script>
+    <script>
+       var vm= new Vue({
+            el:"#di",
+            data:{
+                nu:1,
+            },
+            methods:{
+                    but1(){
+                        this.nu=this.nu-1;
+                    },
+                    but2(){
+                        this.nu=this.nu+1;
+                    }
+                }
+        })
+    
+    
+    </script>
+</body>
+</html>
