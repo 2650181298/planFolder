@@ -20,6 +20,17 @@ git checkout -b branchname(Ö±½ÓĞÂ½¨Ò»¸ö·ÖÖ§È»ºóÇĞ»»ÖÁĞÂ´´½¨µÄ·ÖÖ§).¾ÍÊÇ´´½¨¼ÓÇĞ»
  git push origin £¨Äã·ÖÖ§µÄÃû×Ö£©½«ĞÂ·ÖÖ§ÍÆËÍÖÁGitHub.
 
 
+½«·ÖÖ§´úÂëfeature-v3Í¬²½µ½masterÉÏ
+git checkout feature-v3
+git add .
+git commit -m "..."
+git checkout master
+git merge feature-v3
+// ´¦Àí³åÍ» git add & git commit
+git push
+
+
+
 
 git config --global user.name ""  			GitHud Ãû×Ö
 git config --global user.email ""               		ÓÊÏä
