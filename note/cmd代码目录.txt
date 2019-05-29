@@ -4,3 +4,13 @@ npm init egg --type=simple  ------创建egg项目
 npm run dev -------启动egg项目
 npm install --------安装项目依赖
 npm i egg-view-nunjucks --save   ------如果用Nunjucks渲染那么就下载对应插件（egg-view-nunjucks）【必须】
+
+
+MD5加密的使用方法
+
+1.安装模块
+  npm install md5-node --save
+2.引入模块
+  var md5=require('md5-node');
+3.使用
+  md5('123456');
