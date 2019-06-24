@@ -10,6 +10,9 @@ git rm -r --cached image--------删除磁盘上的image文件
 git clone *****		-----url地址可以下载地址上的东西此时两者保持同步
 git push -f origin master---------最牛逼的强推代码直接覆盖git所有文档
 git pull --rebase origin master-----------拉取远程的文件把本地的覆盖，再上传
+git pull ****------------------------更新本地代码
+
+
 
 
 git branch -a(查看所有分支包括本地分支和远程分支).
@@ -36,3 +39,5 @@ git config --global user.name ""  			GitHud 名字
 git config --global user.email ""               		邮箱
 在命令行或终端中使用下面的命令可以设置git自己的名字和电子邮件。
 这是因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。
+
+
