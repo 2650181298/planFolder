@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>xhr</h1>
+    <button>获取数据</button>
+    <script>
+        // //xhr实现数据请求
+        // document.querySelector("button").onclick = function(){
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open("get","/data.txt");
+        //     xhr.send()
+        //     xhr.onreadystatechange = function(){
+        //         if(xhr.readyState === 4 && xhr.status === 200){
+        //             alert(xhr.responseText)
+        //         }
+        //     }
+        // }
+
+        //使用回調函數封装ajax方法
+        // function myajax(method,url,next) {
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open(method, url);
+        //     xhr.send()
+        //     xhr.onreadystatechange = function () {
+        //         if (xhr.readyState === 4 && xhr.status === 200) {//这里的4是readystate的一种状态
+        //             next(xhr.responseText);//回调
+        //         }
+        //     }
+        // }
+
+        // document.querySelector("button").onclick = function() {
+        //     //不能使用return获取异步数据
+        //     // var result = myajax("get","/data.txt");
+        //     // alert(result);
+        //     myajax("get","/data.txt",function(data){
+        //         alert(data);
+        //     });
+        // }
+
+        //Promise
+        // var p = new Promise();
+        // p.then()
+
+
+        // 使用promise封装
+        function myajax(method,url,next) {
+
+            return new Promise(function(resolve){
+                var xhr = new XMLHttpRequest();
+                xhr.open(method, url);
+                xhr.send()
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        resolve(xhr.responseText);
+                    }
+                }
+            })
+
+        }
+
+        document.querySelector("button").onclick = function() {
+            var p = myajax("get","data.txt");
+            p.then(function(data){
+                alert(data);
+            })
+        }
+
+
+        
+    </script>
+</body>
+
+</html>

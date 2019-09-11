@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>获取数据？</button>
+    <script>
+        
+        async function asyncAwait(method, url) {
+            return url;
+        };
+        
+        let a = asyncAwait();
+        
+        document.querySelector("button").onclick = function s (){
+            var p = asyncAwait("git","/data.txt");
+            p.then(function(data){
+                alert(data);
+            })
+            console.log(p);
+        }
+
+    </script>
+</body>
+</html>

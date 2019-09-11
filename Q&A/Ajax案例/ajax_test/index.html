@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>获取数据</button>
+    <script src="jquery.js"></script>
+    <script>
+        $("button").click(function(){//点击执行函数
+            //输出data.txt中的数据，hello ajax
+            $.ajax({
+                type:"get",//请求方法
+                url:"data.txt"//请求路径
+            }).done(function(res){//done方法可以穿参
+                alert(res)
+            })
+
+        })
+    </script>
+</body>
+</html>
