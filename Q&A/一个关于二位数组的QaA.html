@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // 第一题：已给出一个二维数组，输出数组中的所有元素
+    var list = [
+        ["超人","蝙蝠侠","绿灯侠"],
+        ["雷神","钢铁侠","蜘蛛侠","黑寡妇"],
+        ["孙悟空","猪八戒"]
+    ]
+
+
+
+    // // 做法
+
+
+    // for(var i = 0;i<list.length;i++){
+    //     for(var j = 0;j<list[i].length;j++){
+    //         console.log(list[i][j])   
+    //     }   
+    // }
+
+    //第二题：给定一个一维数组，按照分类，变成二维数组。
+    var list = [
+        {type:0,name:"超人"},
+        {type:1,name:"雷神"},
+        {type:2,name:"孙悟空"},
+        {type:1,name:"钢铁侠"},
+        {type:0,name:"蝙蝠侠"},
+        {type:1,name:"蜘蛛侠"},
+        {type:1,name:"黑寡妇"},
+        {type:0,name:"绿灯侠"},
+        {type:2,name:"猪八戒"},
+    ]
+
+    // //目标
+    // var targetList = [
+    //     [
+    //         {type:0,name:"超人"}, 
+    //         {type:0,name:"蝙蝠侠"},
+    //         {type:0,name:"绿灯侠"}
+    //     ],[
+    //         {type:1,name:"雷神"},
+    //         {type:1,name:"钢铁侠"},
+    //         {type:1,name:"蜘蛛侠"},
+    //         {type:1,name:"黑寡妇"},
+    //     ],[
+    //         {type:2,name:"孙悟空"},
+    //         {type:2,name:"猪八戒"},
+    //     ]
+    // ]
+    
+
+
+
+    // // 做法
+
+    // var list0 = [];
+    // var list1 = [];
+    // var list2 = [];
+
+    // for(var i = 0;i<list.length;i++){
+        
+    //     if(list[i].type === 0){
+    //         list0.push(list[i]);
+    //     }else if(list[i].type === 1){
+    //         list1.push(list[i]);
+    //     }else if(list[i].type === 2){
+    //         list2.push(list[i]);
+    //     }
+    // }
+    // var targetList = [];
+    // targetList.push(list0)
+    // targetList.push(list1)
+    // targetList.push(list2)
+    // console.log(targetList);
+</script>
+
+</body>
+</html>
