@@ -1,0 +1,35 @@
+{% block css %}
+<link rel="stylesheet" href="../public/css/index.css">
+{% endblock %}
+
+{% extends 'layout.html' %} {% block book %}
+<div class="index">
+    <div class="contentfooter">
+        <div class="HomeContent">
+            <div class="top">
+                <div class="front">
+                    <a href="#">
+                        <p>学习手册</p>
+                    </a>
+                </div>
+                <div class="cont clear">
+                    <div class="col-md-4 cont-content">
+                        <div class="identical " @click="btn">
+                            <a href="/content/1">
+                                <h4>《前端开发学习手册》</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 cont-content">
+                        <div class="identical">
+                            <a href="/content/2">
+                                <h4>《java开发学习手册》</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

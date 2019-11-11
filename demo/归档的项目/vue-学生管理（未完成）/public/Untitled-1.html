@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10;//新建变量a等于10
+        let b = 20;//新建变量b等于20
+        console.log(a+b);//输出a加b（这是一条异步线）
+        
+        setTimeout(function(){
+            a=a+10;
+            console.log(a+b);//输出a加b（这是另一条异步线）
+        },1000);
+        
+        //得出的应该是两个值30和40
+    </script>
+</body>
+</html>

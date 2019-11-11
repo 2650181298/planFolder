@@ -1,0 +1,15 @@
+{% extends './book.html' %}
+
+{% block content %}
+
+<div class="content_chapter_list">
+    {% for item in chapterList %}
+    <div class="col-sm-3">
+        <a href="/content/{{detail.bookID}}/{{item.festiveList[0].id}}">
+            <button class="btn btn-default btn-block">{{item.name}}</button>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
